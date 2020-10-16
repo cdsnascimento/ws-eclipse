@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class UsedProduct extends Product {
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
 	private Date manufactureDate;
 	
@@ -20,7 +20,7 @@ public class UsedProduct extends Product {
 	
 	@Override
 	public String getName() {
-		return super.getName() + "(used)";
+		return super.getName();
 	}
 
 	public Date getManufactureDate() {
@@ -34,7 +34,14 @@ public class UsedProduct extends Product {
 	@Override
 	public String priceTag() {
 		
-		return super.priceTag() + "(Manufacture Date: " + sdf.format(this.getManufactureDate()) + ")";
+		return 
+				this.getName()
+				+ " (used) $ "
+				+ String.format("%.2f", this.getPrice())
+				+ " (Manufacture Date: " 
+				+ sdf.format(this.getManufactureDate()) 
+				+ ")"
+				;
 		
 	}
 	
