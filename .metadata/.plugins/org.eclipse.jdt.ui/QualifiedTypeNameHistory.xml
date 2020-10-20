@@ -27,4 +27,5 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="entities.UsedProduct"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="entities.TaxPayer"/>
 </qualifiedTypeNameHistroy>

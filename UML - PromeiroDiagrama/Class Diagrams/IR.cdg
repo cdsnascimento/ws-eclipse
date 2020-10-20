@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="IR">
+  <ClassDiagramComponents>
+    <Class name="Pessoa" package="entities" visibility="public" isAbstract="true" xPosition="229.0" yPosition="37.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="rendaMensal" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcImposto" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="PessoaJuridica" package="entities" visibility="public" xPosition="310.0" yPosition="259.0">
+      <Fields>
+        <Field name="numEmplloyee" type="Interget" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcImposto" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PessoaFisica" package="entities" visibility="public" xPosition="142.0" yPosition="259.0">
+      <Fields>
+        <Field name="gastoSaude" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcImposto" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="entities.PessoaFisica" target="entities.Pessoa"/>
+    <IsRelation name="is" source="entities.PessoaJuridica" target="entities.Pessoa"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
